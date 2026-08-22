@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RackNerd 特价 VPS 选购指南 - 全网超高性价比云服务器</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .badge-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .7; }
+        }
+        .skeleton {
+            animation: shimmer 1.5s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+            0%, 100% { opacity: .5; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- 顶部导航栏 -->
+    <header class="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="font-extrabold text-xl text-blue-600 tracking-tight flex items-center gap-2">
+                <i class="fa-solid fa-server text-2xl"></i>
+                <span>RackNerd <span class="text-slate-900 font-bold text-base">Deals</span></span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="hidden sm:inline-flex items-center text-xs bg-green-50 text-green-700 px-2.5 py-1 rounded-full border border-green-200">
+                    <i class="fa-solid fa-rotate text-[10px] mr-1"></i>每日自动同步
+                </span>
+                <a href="https://www.racknerd.com/specials/#plans" target="_blank" rel="nofollow" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition shadow-sm hover:shadow">
+                    直达官网活动 <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero 标语区 -->
+    <section class="pt-12 pb-8 bg-gradient-to-b from-blue-50/70 to-slate-50 text-center px-4">
+        <div class="max-w-3xl mx-auto">
+            <span class="inline-flex items-center gap-1.5 bg-blue-100 text-blue-800 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-4">
+                <i class="fa-solid fa-fire text-amber-500"></i> 限时特惠 · 续费同价
+            </span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+                RackNerd 官方特价套餐汇总
+            </h1>
+            <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+                美西洛杉矶、圣何塞等优化机房可选，纯 SSD RAID-10 高速存储，KVM 纯虚拟化架构，支持支付宝、PayPal 付款。
+            </p>
+        </div>
+    </section>
+
+    <!-- 套餐卡片展示区 -->
+    <main class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex items-center justify-center mb-6">
+            <p id="last-updated" class="hidden items-center text-xs text-slate-500 bg-white border border-slate-200 rounded-full px-4 py-1.5 shadow-sm"></p>
+        </div>
+
+        <!-- 加载骨架屏 -->
+        <div id="plans-loading" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            <div class="skeleton bg-white rounded-2xl p-5 border border-slate-200 h-96"></div>
+            <div class="skeleton bg-white rounded-2xl p-5 border border-slate-200 h-96"></div>
+            <div class="skeleton bg-white rounded-2xl p-5 border border-slate-200 h-96"></div>
+            <div class="skeleton bg-white rounded-2xl p-5 border border-slate-200 h-96"></div>
+            <div class="skeleton bg-white rounded-2xl p-5 border border-slate-200 h-96"></div>
+        </div>
+
+        <!-- 数据驱动渲染：由 JS 从 data.json 填充 -->
+        <div id="plans-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"></div>
+
+        <!-- 数据加载失败兜底 -->
+        <div id="plans-empty" class="hidden text-center py-16">
+            <i class="fa-solid fa-triangle-exclamation text-3xl text-amber-400 mb-4"></i>
+            <p class="text-slate-600 mb-4">暂时无法获取套餐数据，请稍后再试。</p>
+            <a href="https://www.racknerd.com/specials/#plans" target="_blank" rel="nofollow"
+               class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition">
+                前往官网查看活动
+            </a>
+        </div>
+        <noscript>
+            <div class="text-center py-16">
+                <p class="text-slate-600">本站套餐数据通过脚本加载，请开启 JavaScript，或<a href="https://www.racknerd.com/specials/#plans" target="_blank" rel="nofollow" class="text-blue-600 font-semibold">前往 RackNerd 官网</a>查看。</p>
+            </div>
+        </noscript>
+
+        <!-- 平台优势 -->
+        <div class="mt-16 bg-white rounded-3xl p-8 border border-slate-200">
+            <h2 class="text-xl font-extrabold text-slate-900 text-center mb-8">为什么选择 RackNerd？</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 mb-1">即时秒级开通</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">系统全自动化部署，下单支付成功后几分钟即可收到包含 IP 与 Root 密码的开通信件。</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 mb-1">全美多机房自选</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">洛杉矶 DC-02、圣何塞、西雅图、达拉斯、芝加哥、纽约等多个数据中心任选。</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 mb-1">国内友好支付</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">无须双币信用卡门槛，全面支持支付宝 (Alipay)、PayPal 与加密货币结算。</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 mb-1">7x24 小时工单客服</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">平均 10-15 分钟内快速响应的专业工单技术支持团队，售后无后顾之忧。</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚说明 -->
+    <footer class="border-t border-slate-200 mt-16 py-8 text-center text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="mb-2">Disclaimer: 本站为 RackNerd 优惠信息导购页面，所有价格与机房配置最终以 RackNerd 官方购物车结算为准。</p>
+            <p>© 2026 RackNerd Deals Guide. All Rights Reserved. 套餐数据每日自动同步自 RackNerd 官网。</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var ICONS = {
+                vcpu: 'fa-microchip',
+                core: 'fa-microchip',
+                ram: 'fa-memory',
+                ssd: 'fa-hard-drive',
+                storage: 'fa-hard-drive',
+                transfer: 'fa-gauge-high',
+                network: 'fa-network-wired',
+                port: 'fa-network-wired',
+                root: 'fa-terminal',
+                ipv4: 'fa-shield-halved',
+                ip: 'fa-shield-halved',
+                kvm: 'fa-server',
+                virtual: 'fa-server',
+                location: 'fa-map-location-dot',
+                deploy: 'fa-map-location-dot'
+            };
+
+            function esc(s) {
+                return String(s).replace(/[&<>"']/g, function (c) {
+                    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+                });
+            }
+
+            function specIcon(spec) {
+                var s = String(spec).toLowerCase();
+                for (var key in ICONS) {
+                    if (s.indexOf(key) !== -1) return ICONS[key];
+                }
+                return 'fa-check';
+            }
+
+            // price 形如 "$21.99 /year"，拆分为金额 + 周期
+            function parsePrice(plan) {
+                var raw = plan.price || '';
+                var m = raw.match(/^(\S*\$\d+(?:\.\d+)?)\s*(\/\S+)?/);
+                var amount = m ? m[1] : raw;
+                var period = m && m[2] ? m[2] : (plan.period || '');
+                period = period.replace('/year', '/ 年').replace('/month', '/ 月').replace('/quarterly', '/ 季度');
+                return { amount: amount, period: period };
+            }
+
+            function ramTag(title) {
+                var m = String(title).match(/(\d+(?:\.\d+)?)\s*GB/i);
+                if (!m) return '热销爆款';
+                var gb = parseFloat(m[1]);
+                if (gb <= 1) return '入门体验';
+                if (gb < 3) return '博客 / 代理';
+                if (gb < 4.5) return '建站 / Docker';
+                if (gb < 6) return '多站点 / 生产';
+                return '大流量 / 资源密集';
+            }
+
+            function cardHTML(plan, idx) {
+                var featured = !!plan.featured;
+                var p = parsePrice(plan);
+                var tag = ramTag(plan.title);
+
+                var cardClass = featured
+                    ? 'bg-white rounded-2xl p-5 border-2 border-blue-600 shadow-xl relative flex flex-col justify-between xl:-translate-y-2'
+                    : 'bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between';
+
+                var badge = featured
+                    ? '<span class="badge-pulse absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider shadow">🔥 性价比首选</span>'
+                    : '';
+
+                var tagClass = featured ? 'text-blue-600' : 'text-slate-500';
+                var priceBoxClass = featured
+                    ? 'my-4 py-3 bg-blue-50/60 rounded-xl text-center border border-blue-100'
+                    : 'my-4 py-3 bg-slate-50 rounded-xl text-center border border-slate-100';
+                var priceColor = featured ? 'text-blue-700' : 'text-slate-900';
+                var liColor = featured ? 'text-slate-700 font-medium' : 'text-slate-600';
+                var btnClass = featured
+                    ? 'mt-6 block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl shadow-md transition text-sm'
+                    : 'mt-6 block w-full text-center bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2.5 rounded-xl transition text-sm';
+
+                var items = (plan.specs || []).map(function (s) {
+                    return '<li class="flex items-center gap-2"><i class="fa-solid ' + specIcon(s) + ' text-blue-500 w-4"></i> <span>' + esc(s) + '</span></li>';
+                }).join('');
+
+                return '' +
+                    '<div class="' + cardClass + '">' +
+                        badge +
+                        '<div>' +
+                            '<div class="flex justify-between items-center">' +
+                                '<span class="text-xs font-bold ' + tagClass + ' tracking-wider">' + esc(tag) + '</span>' +
+                            '</div>' +
+                            '<h3 class="text-lg font-extrabold text-slate-900 mt-2">' + esc(plan.title) + '</h3>' +
+                            '<div class="' + priceBoxClass + '">' +
+                                '<span class="text-2xl sm:text-3xl font-black ' + priceColor + '">' + esc(p.amount) + '</span>' +
+                                '<span class="text-slate-500 text-xs font-medium">' + esc(p.period) + '</span>' +
+                            '</div>' +
+                            '<ul class="space-y-3 text-xs sm:text-sm ' + liColor + '">' + items + '</ul>' +
+                        '</div>' +
+                        '<a href="' + esc(plan.url) + '" target="_blank" rel="nofollow noopener" class="' + btnClass + '">' +
+                            (featured ? '立即抢购' : '立即选购') +
+                        '</a>' +
+                    '</div>';
+            }
+
+            function init() {
+                var grid = document.getElementById('plans-grid');
+                var loading = document.getElementById('plans-loading');
+                var empty = document.getElementById('plans-empty');
+                var updated = document.getElementById('last-updated');
+
+                fetch('data.json', { cache: 'no-store' })
+                    .then(function (resp) {
+                        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                        return resp.json();
+                    })
+                    .then(function (data) {
+                        var plans = Array.isArray(data) ? data : (data.plans || []);
+                        if (!plans.length) throw new Error('no plans');
+                        if (loading) loading.remove();
+                        grid.innerHTML = plans.map(cardHTML).join('');
+                        if (updated && data.last_updated) {
+                            var time = new Date(data.last_updated);
+                            updated.innerHTML = '<i class="fa-solid fa-rotate text-blue-500 mr-1"></i> 最近更新：<span class="font-semibold text-slate-700">' +
+                                time.toLocaleString('zh-CN', { hour12: false }) + '</span><span class="mx-1.5 text-slate-300">·</span>每日自动同步自 RackNerd 官网';
+                            updated.classList.remove('hidden');
+                            updated.classList.add('inline-flex');
+                        }
+                    })
+                    .catch(function () {
+                        if (loading) loading.remove();
+                        grid.innerHTML = '';
+                        if (empty) empty.classList.remove('hidden');
+                    });
+            }
+
+            document.addEventListener('DOMContentLoaded', init);
+        })();
+    </script>
+
+</body>
+</html>

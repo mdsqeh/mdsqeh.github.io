@@ -1,0 +1,91 @@
+{
+  "last_updated": "2026-08-22T11:06:49Z",
+  "source_url": "https://www.racknerd.com/specials/",
+  "plans": [
+    {
+      "title": "1 GB KVM VPS",
+      "price": "$21.99 /year",
+      "specs": [
+        "1 vCPU Core",
+        "20 GB SSD Storage",
+        "1 GB RAM",
+        "3 TB Monthly Transfer",
+        "1Gbps Network Port",
+        "Full Root Access",
+        "1 IPv4 Address",
+        "KVM/SolusVM",
+        "Deploy in Multiple Locations"
+      ],
+      "featured": false,
+      "url": "https://my.racknerd.com/cart.php?a=add&pid=952"
+    },
+    {
+      "title": "2 GB KVM VPS",
+      "price": "$35.99 /year",
+      "specs": [
+        "2 vCPU Cores",
+        "35 GB SSD Storage",
+        "2 GB RAM",
+        "5 TB Monthly Transfer",
+        "1Gbps Network Port",
+        "Full Root Access",
+        "1 IPv4 Address",
+        "KVM/SolusVM",
+        "Deploy in Multiple Locations"
+      ],
+      "featured": true,
+      "url": "https://my.racknerd.com/cart.php?a=add&pid=953"
+    },
+    {
+      "title": "4 GB KVM VPS",
+      "price": "$59.99 /year",
+      "specs": [
+        "3 vCPU Cores",
+        "60 GB SSD Storage",
+        "4 GB RAM",
+        "7 TB Monthly Transfer",
+        "1Gbps Network Port",
+        "Full Root Access",
+        "1 IPv4 Address",
+        "KVM/SolusVM",
+        "Deploy in Multiple Locations"
+      ],
+      "featured": false,
+      "url": "https://my.racknerd.com/cart.php?a=add&pid=954"
+    },
+    {
+      "title": "6 GB KVM VPS",
+      "price": "$89.99 /year",
+      "specs": [
+        "6 vCPU Cores",
+        "100 GB SSD Storage",
+        "6 GB RAM",
+        "12 TB Monthly Transfer",
+        "1Gbps Network Port",
+        "Full Root Access",
+        "1 IPv4 Address",
+        "KVM/SolusVM",
+        "Deploy in Multiple Locations"
+      ],
+      "featured": false,
+      "url": "https://my.racknerd.com/cart.php?a=add&pid=955"
+    },
+    {
+      "title": "8 GB KVM VPS",
+      "price": "$119.99 /year",
+      "specs": [
+        "7 vCPU Cores",
+        "150 GB SSD Storage",
+        "8 GB RAM",
+        "20 TB Monthly Transfer",
+        "1Gbps Network Port",
+        "Full Root Access",
+        "1 IPv4 Address",
+        "KVM/SolusVM",
+        "Deploy in Multiple Locations"
+      ],
+      "featured": false,
+      "url": "https://my.racknerd.com/cart.php?a=add&pid=956"
+    }
+  ]
+}

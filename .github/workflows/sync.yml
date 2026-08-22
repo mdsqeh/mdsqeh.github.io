@@ -1,0 +1,59 @@
+# 每日自动同步 RackNerd 特价套餐
+# - 定时抓取官网特价，更新 data.json 并自动提交
+# - 若套餐无变化则不产生提交；若抓取失败则保留旧数据并标记失败
+#
+# 如何配置推广 ID（可选）：
+#   Repo → Settings → Secrets and variables → Actions → Variables 新增：
+#     Name: RACKNERD_AFF_ID   Value: 你的数字推广 ID（例如 12345）
+#   配置后购物车链接会自动转为 aff.php 联盟链接；不配置则使用官网原始链接。
+
+name: Daily Sync RackNerd Deals
+
+on:
+  schedule:
+    # 每天 UTC 00:00（北京时间 08:00）自动执行
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 支持在 GitHub 后台手动点击触发
+
+concurrency:
+  group: racknerd-sync
+  cancel-in-progress: false
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write # 赋予提交代码的权限
+    env:
+      RACKNERD_AFF_ID: ${{ vars.RACKNERD_AFF_ID }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Scraper
+        run: python scraper.py
+
+      - name: Commit and push if changed
+        # 只在 data.json 有变化时提交；scraper 内部已保证“无变化不重写文件”
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data.json
+          if git diff --cached --quiet; then
+            echo "data.json 无变化，无需提交。"
+          else
+            git commit -m "chore: sync RackNerd deals data"
+            git push
+          fi
