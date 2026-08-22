@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-22T11:06:49Z",
+  "last_updated": "2026-08-22T11:26:42Z",
   "source_url": "https://www.racknerd.com/specials/",
   "plans": [
     {
@@ -17,7 +17,7 @@
         "Deploy in Multiple Locations"
       ],
       "featured": false,
-      "url": "https://my.racknerd.com/cart.php?a=add&pid=952"
+      "url": "https://my.racknerd.com/aff.php?aff=20996&pid=952"
     },
     {
       "title": "2 GB KVM VPS",
@@ -34,7 +34,7 @@
         "Deploy in Multiple Locations"
       ],
       "featured": true,
-      "url": "https://my.racknerd.com/cart.php?a=add&pid=953"
+      "url": "https://my.racknerd.com/aff.php?aff=20996&pid=953"
     },
     {
       "title": "4 GB KVM VPS",
@@ -51,7 +51,7 @@
         "Deploy in Multiple Locations"
       ],
       "featured": false,
-      "url": "https://my.racknerd.com/cart.php?a=add&pid=954"
+      "url": "https://my.racknerd.com/aff.php?aff=20996&pid=954"
     },
     {
       "title": "6 GB KVM VPS",
@@ -68,7 +68,7 @@
         "Deploy in Multiple Locations"
       ],
       "featured": false,
-      "url": "https://my.racknerd.com/cart.php?a=add&pid=955"
+      "url": "https://my.racknerd.com/aff.php?aff=20996&pid=955"
     },
     {
       "title": "8 GB KVM VPS",
@@ -85,7 +85,7 @@
         "Deploy in Multiple Locations"
       ],
       "featured": false,
-      "url": "https://my.racknerd.com/cart.php?a=add&pid=956"
+      "url": "https://my.racknerd.com/aff.php?aff=20996&pid=956"
     }
   ]
 }
