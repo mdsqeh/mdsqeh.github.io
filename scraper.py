@@ -91,20 +91,25 @@ def scrape() -> dict:
 def main() -> None:
     data = scrape()
 
-    old = None
-    if os.path.exists(OUTPUT):
-        with open(OUTPUT, encoding="utf-8") as f:
-            old = json.load(f)
+    # old = None
+    # if os.path.exists(OUTPUT):
+    #     with open(OUTPUT, encoding="utf-8") as f:
+    #         old = json.load(f)
 
-    # 套餐内容未变化时不重写文件，避免每日产生无意义提交
-    if old and old.get("plans") == data["plans"]:
-        print(f"套餐无变化，跳过更新（共 {len(data['plans'])} 个套餐）。")
-        return
+    # # 套餐内容未变化时不重写文件，避免每日产生无意义提交
+    # if old and old.get("plans") == data["plans"]:
+    #     print(f"套餐无变化，跳过更新（共 {len(data['plans'])} 个套餐）。")
+    #     return
 
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-    print(f"成功更新 {len(data['plans'])} 个特价套餐数据！")
+    # print(f"成功更新 {len(data['plans'])} 个特价套餐数据！")
+    # for p in data["plans"]:
+    #     flag = " ★" if p["featured"] else ""
+    #     print(f"  - {p['title']}{flag} | {p['price']}")
+    
+    print(f"成功同步数据！更新时间：{data['last_updated']}（共 {len(data['plans'])} 个套餐）")
     for p in data["plans"]:
         flag = " ★" if p["featured"] else ""
         print(f"  - {p['title']}{flag} | {p['price']}")
