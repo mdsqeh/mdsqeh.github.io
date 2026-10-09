@@ -50,16 +50,15 @@ def scrape() -> dict:
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
 
-    cards = soup.select(".plan-card")
+    cards = soup.select(".sn-plan")
     if not cards:
-        raise RuntimeError("页面结构可能已变化，未找到 .plan-card 节点，保留旧数据。")
+        raise RuntimeError("页面结构可能已变化，未找到 .sn-plan 节点，保留旧数据。")
 
     plans = []
     for card in cards:
-        title_el = card.select_one(".plan-header h3")
-        price_el = card.select_one(".price")
-        features_el = card.select_one(".plan-features")
-        link_el = card.select_one(".plan-footer a")
+        title_el = card.select_one(".sn-plan-head h3")
+        price_el = card.select_one(".sn-price")
+        link_el = card.select_one("a.oca-btn")
         if not title_el or not price_el:
             continue
 
@@ -68,8 +67,8 @@ def scrape() -> dict:
 
         specs = [
             li.get_text(" ", strip=True)
-            for li in features_el.select("li")
-        ] if features_el else []
+            for li in card.select("ul li")
+        ]
 
         cart_url = link_el.get("href", "") if link_el else ""
 
@@ -77,7 +76,7 @@ def scrape() -> dict:
             "title": title_el.get_text(strip=True),
             "price": price,
             "specs": specs,
-            "featured": "featured" in (card.get("class") or []),
+            "featured": "is-featured" in (card.get("class") or []),
             "url": build_order_url(cart_url),
         })
 
