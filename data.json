@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-22T03:33:23Z",
+  "last_updated": "2026-10-09T13:54:46Z",
   "source_url": "https://www.racknerd.com/specials/",
   "plans": [
     {
@@ -13,7 +13,7 @@
         "1Gbps Network Port",
         "Full Root Access",
         "1 IPv4 Address",
-        "KVM/SolusVM",
+        "KVM/ctrl Panel",
         "Deploy in Multiple Locations"
       ],
       "featured": false,
@@ -30,7 +30,7 @@
         "1Gbps Network Port",
         "Full Root Access",
         "1 IPv4 Address",
-        "KVM/SolusVM",
+        "KVM/ctrl Panel",
         "Deploy in Multiple Locations"
       ],
       "featured": true,
@@ -47,7 +47,7 @@
         "1Gbps Network Port",
         "Full Root Access",
         "1 IPv4 Address",
-        "KVM/SolusVM",
+        "KVM/ctrl Panel",
         "Deploy in Multiple Locations"
       ],
       "featured": false,
@@ -64,7 +64,7 @@
         "1Gbps Network Port",
         "Full Root Access",
         "1 IPv4 Address",
-        "KVM/SolusVM",
+        "KVM/ctrl Panel",
         "Deploy in Multiple Locations"
       ],
       "featured": false,
@@ -81,7 +81,7 @@
         "1Gbps Network Port",
         "Full Root Access",
         "1 IPv4 Address",
-        "KVM/SolusVM",
+        "KVM/ctrl Panel",
         "Deploy in Multiple Locations"
       ],
       "featured": false,
