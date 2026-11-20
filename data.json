@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-11-19T06:06:55Z",
+  "last_updated": "2026-11-20T05:54:09Z",
   "source_url": "https://www.racknerd.com/specials/",
   "plans": [
     {
       "title": "1 GB KVM VPS",
-      "price": "$21.99 /year",
+      "price": "$15.98 /year",
       "specs": [
         "1 vCPU Core",
         "20 GB SSD Storage",
@@ -13,79 +13,177 @@
         "1Gbps Network Port",
         "Full Root Access",
         "1 IPv4 Address",
-        "KVM/ctrl Panel",
+        "Free Clientexec License",
+        "KVM / ctrl Panel",
         "Deploy in Multiple Locations"
       ],
       "featured": false,
-      "url": "https://my.racknerd.com/aff.php?aff=20996&pid=952"
+      "url": ""
     },
     {
-      "title": "2 GB KVM VPS",
-      "price": "$35.99 /year",
+      "title": "2.5 GB KVM VPS",
+      "price": "$27.98 /year",
       "specs": [
         "2 vCPU Cores",
-        "35 GB SSD Storage",
-        "2 GB RAM",
-        "5 TB Monthly Transfer",
+        "30 GB SSD Storage",
+        "2.5 GB RAM",
+        "6 TB Monthly Transfer",
         "1Gbps Network Port",
         "Full Root Access",
         "1 IPv4 Address",
-        "KVM/ctrl Panel",
+        "Free Clientexec License",
+        "KVM / ctrl Panel",
         "Deploy in Multiple Locations"
       ],
-      "featured": true,
-      "url": "https://my.racknerd.com/aff.php?aff=20996&pid=953"
+      "featured": false,
+      "url": ""
     },
     {
       "title": "4 GB KVM VPS",
-      "price": "$59.99 /year",
+      "price": "$47.98 /year",
       "specs": [
-        "3 vCPU Cores",
+        "4 vCPU Cores",
         "60 GB SSD Storage",
         "4 GB RAM",
-        "7 TB Monthly Transfer",
+        "10 TB Monthly Transfer",
         "1Gbps Network Port",
         "Full Root Access",
         "1 IPv4 Address",
-        "KVM/ctrl Panel",
+        "Free Clientexec License",
+        "KVM / ctrl Panel",
         "Deploy in Multiple Locations"
       ],
-      "featured": false,
-      "url": "https://my.racknerd.com/aff.php?aff=20996&pid=954"
+      "featured": true,
+      "url": ""
     },
     {
       "title": "6 GB KVM VPS",
-      "price": "$89.99 /year",
+      "price": "$74.98 /year",
       "specs": [
         "6 vCPU Cores",
-        "100 GB SSD Storage",
+        "85 GB SSD Storage",
         "6 GB RAM",
-        "12 TB Monthly Transfer",
+        "15 TB Monthly Transfer",
         "1Gbps Network Port",
         "Full Root Access",
         "1 IPv4 Address",
-        "KVM/ctrl Panel",
+        "Free Clientexec License",
+        "KVM / ctrl Panel",
         "Deploy in Multiple Locations"
       ],
       "featured": false,
-      "url": "https://my.racknerd.com/aff.php?aff=20996&pid=955"
+      "url": ""
     },
     {
       "title": "8 GB KVM VPS",
-      "price": "$119.99 /year",
+      "price": "$94.98 /year",
       "specs": [
-        "7 vCPU Cores",
-        "150 GB SSD Storage",
+        "6 vCPU Cores",
+        "140 GB SSD Storage",
         "8 GB RAM",
         "20 TB Monthly Transfer",
         "1Gbps Network Port",
         "Full Root Access",
         "1 IPv4 Address",
-        "KVM/ctrl Panel",
+        "Free Clientexec License",
+        "KVM / ctrl Panel",
         "Deploy in Multiple Locations"
       ],
       "featured": false,
-      "url": "https://my.racknerd.com/aff.php?aff=20996&pid=956"
+      "url": ""
+    },
+    {
+      "title": "Shared – 35 GB",
+      "price": "$9.49 /year",
+      "specs": [
+        "Free Website Migration",
+        "Free Daily Backups",
+        "Free SSL Certificates",
+        "LiteSpeed Web Server",
+        "Softaculous Installer",
+        "CloudLinux OS"
+      ],
+      "featured": false,
+      "url": ""
+    },
+    {
+      "title": "Shared – 90 GB",
+      "price": "$21.99 /year",
+      "specs": [
+        "Free Website Migration",
+        "Free Daily Backups",
+        "Free SSL Certificates",
+        "LiteSpeed Web Server",
+        "Softaculous Installer",
+        "CloudLinux OS"
+      ],
+      "featured": true,
+      "url": ""
+    },
+    {
+      "title": "Shared – 200 GB",
+      "price": "$49.88 /year",
+      "specs": [
+        "Free Website Migration",
+        "Free Daily Backups",
+        "Free SSL Certificates",
+        "LiteSpeed Web Server",
+        "Softaculous Installer",
+        "CloudLinux OS"
+      ],
+      "featured": false,
+      "url": ""
+    },
+    {
+      "title": "Reseller – 80 GB",
+      "price": "$29.88 /year",
+      "specs": [
+        "AdminBolt Reseller & Control Panels",
+        "Free Account Migrations",
+        "White-Label Hosting",
+        "Free SSL Certificates",
+        "Free Daily Backups",
+        "LiteSpeed Web Server",
+        "AI MCP Support",
+        "Softaculous Installer",
+        "CloudLinux OS"
+      ],
+      "featured": false,
+      "url": ""
+    },
+    {
+      "title": "Reseller – 115 GB",
+      "price": "$54.88 /year",
+      "specs": [
+        "AdminBolt Reseller & Control Panels",
+        "Free Account Migrations",
+        "White-Label Hosting",
+        "Free SSL Certificates",
+        "Free Daily Backups",
+        "LiteSpeed Web Server",
+        "AI MCP Support",
+        "Softaculous Installer",
+        "CloudLinux OS"
+      ],
+      "featured": true,
+      "url": ""
+    },
+    {
+      "title": "Reseller – 185 GB",
+      "price": "$84.88 /year",
+      "specs": [
+        "AdminBolt Reseller & Control Panels",
+        "Free Account Migrations",
+        "White-Label Hosting",
+        "Free SSL Certificates",
+        "Free Daily Backups",
+        "LiteSpeed Web Server",
+        "AI MCP Support",
+        "Softaculous Installer",
+        "CloudLinux OS"
+      ],
+      "featured": false,
+      "url": ""
     }
   ]
 }
